@@ -1,0 +1,1 @@
+echo "this is a cognetiks jenkins Quality gate check demo : %date% : %time%"

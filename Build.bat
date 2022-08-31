@@ -1,0 +1,1 @@
+echo "this is a cognetiks jenkins build demo : %date% : %time%"
