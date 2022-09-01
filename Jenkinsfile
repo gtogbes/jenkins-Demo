@@ -29,5 +29,11 @@ pipeline {
                 	bat 'Deploy.bat'
                 	}
         	}
+			stage('build the java code') {
+        	steps {
+                	javac hello.java
+					java Hello
+                	}
+        	}
     	}
 }
