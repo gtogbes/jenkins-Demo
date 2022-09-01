@@ -31,8 +31,7 @@ pipeline {
         	}
 			stage('build the java code') {
         	steps {
-                	javac hello.java
-					java Hello
+                	bat 'java hello.java'
                 	}
         	}
     	}
