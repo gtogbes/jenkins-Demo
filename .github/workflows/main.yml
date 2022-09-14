@@ -17,7 +17,7 @@ jobs:
       image: gtogbes/gcc-arm-none-eabi-ruby:2
       options: -v ${{ github.workspace }}:/mnt'
     steps:
-      - run: printf "${00.01.09.%04d" $BUILD_NUMBER', returnStdout:true).trim()}" | tee --append "$GITHUB_ENV"
+      - run: printf "${(00.01.09.%04d" $BUILD_NUMBER', returnStdout:true).trim()}" | tee --append "$GITHUB_ENV"
       - name: Check environment
         run: echo ${{env.DLRO2x_FIRMWARE_VERSION}} >> environment.groovy
  
