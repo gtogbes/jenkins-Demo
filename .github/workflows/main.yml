@@ -17,4 +17,4 @@ jobs:
       - run: printf "MYVAR=${PATH}:${HOME}" | tee --append "$GITHUB_ENV"
       - name: Check environment
         run: echo ${{env.MYVAR}}
-      - run: printf "DLRO2x_FIRMWARE_VERSION = "${(script:"00.01.09.%04d" $BUILD_NUMBER', returnStdout:true).trim()}"
+      - run: printf "DLRO2x_FIRMWARE_VERSION=${(script:"00.01.09.%04d" $BUILD_NUMBER', returnStdout:true).trim()}"
