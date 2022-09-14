@@ -17,4 +17,6 @@ jobs:
       - run: printf "MYVAR=${GITHUB_SHA::4}:${GITHUB_RUN_ID::3}" | tee --append "$GITHUB_ENV"
       - name: Check environment
         run: echo ${{env.MYVAR}}
-      - run: printf "DLRO2x_FIRMWARE_VERSION=${(script:"00.01.09.%04d" $GITHUB_RUN_ID', returnStdout:true).trim()}"
+      - run: printf "DLRO2x_FIRMWARE_VERSION=${"00.01.09.%04d" $GITHUB_RUN_ID', returnStdout:true).trim()}" | tee --append "$GITHUB_ENV"
+      - name: check-environment
+      - run: ${{env.DLRO2x_FIRMWARE_VERSION}}
