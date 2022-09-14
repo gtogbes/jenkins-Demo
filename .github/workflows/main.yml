@@ -16,6 +16,5 @@ jobs:
     steps:
       - run: printf "DLRO2x_FIRMWARE_VERSION=${GITHUB_SHA::2}:${GITHUB_RUN_ID::2} ${returnStdout:true.trim()}" | tee --append "$GITHUB_ENV"
       - name: Check environment
-        run: echo ${{env.DLRO2x_FIRMWARE_VERSION}}
-      - run: printf "DLRO2x_FIRMWARE_VERSION=${"00.01.09.%04d" $GITHUB_RUN_ID', ${returnStdout:true.trim()}" | tee --append "$GITHUB_ENV"
-      - run: ${{env.DLRO2x_FIRMWARE_VERSION}}
+        run: echo ${{env.DLRO2x_FIRMWARE_VERSION}} >> environment.groovy
+ 
