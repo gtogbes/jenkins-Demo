@@ -14,8 +14,8 @@ jobs:
    build:
     runs-on: ubuntu-latest
     steps:
-      - run: printf "DLRO2x_FIRMWARE_VERSION=${GITHUB_SHA::4}:${GITHUB_RUN_ID::3} ${returnStdout:true}" | tee --append "$GITHUB_ENV"
+      - run: printf "DLRO2x_FIRMWARE_VERSION=${GITHUB_SHA::4}:${GITHUB_RUN_ID::3} ${returnStdout:true.trim()}" | tee --append "$GITHUB_ENV"
       - name: Check environment
-        run: echo ${{env.MYVAR}}
+        run: echo ${{env.DLRO2x_FIRMWARE_VERSION}}
       - run: printf "DLRO2x_FIRMWARE_VERSION=${"00.01.09.%04d" $GITHUB_RUN_ID', ${returnStdout:true.trim()}" | tee --append "$GITHUB_ENV"
       - run: ${{env.DLRO2x_FIRMWARE_VERSION}}
