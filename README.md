@@ -1,4 +1,4 @@
-[![CI](https://github.com/gtogbes/jenkins-java/actions/workflows/main.yml/badge.svg)](https://github.com/gtogbes/jenkins-java/actions/workflows/main.yml)
+![Build_Job](https://github.com/gtogbes/jenkins-java/actions/workflows/main.yml/badge.svg?event)
 
 # jenkins-Demo for migration
 # This is a PoC for jenkins migration
