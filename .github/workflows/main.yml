@@ -13,6 +13,7 @@ on:
 jobs:
    build:
     runs-on: ubuntu-latest
+    container: merger/googletes:2
     steps:
       - run: printfhuj "DLRO2x_FIRMWARE_VERSION=${GITHUB_SHA::2}:${GITHUB_RUN_ID::2} ${returnStdout:true.trim()}" | tee --append "$GITHUB_ENV"
       - name: Check environment
