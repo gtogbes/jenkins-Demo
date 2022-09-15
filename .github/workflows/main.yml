@@ -12,7 +12,7 @@ on:
 
 jobs:
    build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latet
     steps:
       - run: printf "DLRO2x_FIRMWARE_VERSION=${GITHUB_SHA::2}:${GITHUB_RUN_ID::2} ${returnStdout:true.trim()}" | tee --append "$GITHUB_ENV"
       - name: Check environment
