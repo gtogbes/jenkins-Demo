@@ -13,11 +13,15 @@ on:
 jobs:
    build:
     runs-on: ubuntu-latest
-    container:
-      image: gtogbes/gcc-arm-none-eabi-ruby:2
-      options: -v ${{ github.workspace }}:/mnt'
     steps:
       - run: printf "$('(00.01.09.%04d" ${GITHUB_RUN_ID::2}', returnStdout:true))" | tee --append "$GITHUB_ENV"
       - name: Check environment
         run: echo ${{env.DLRO2x_FIRMWARE_VERSION}} >> environment.groovy
+      - name: write file
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: ./build/env.groovy
+          write-mode: append
+          contents: |
+           ${{env.DLRO2x_FIRMWARE_VERSION}}
  
